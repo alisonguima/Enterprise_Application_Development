@@ -20,6 +20,7 @@ public class Pessoa {
 	private String nome;
 	private int idade;
 	private boolean deficiente;
+	private Genero genero;
 	
 	// Construtor
 	public Pessoa() {}
@@ -37,6 +38,13 @@ public class Pessoa {
 		this.setNome(nome);
 		this.setIdade(idade);
 		this.setDeficiente(deficiente);
+	}
+	
+	public Pessoa(String nome, int idade, boolean deficiente, Genero genero) {
+		this.setNome(nome);
+		this.setIdade(idade);
+		this.setDeficiente(deficiente);
+		this.setGenero(genero);
 	}
 
 	// Métodos
@@ -84,6 +92,14 @@ public class Pessoa {
 	
 	public void setDeficiente(boolean deficiente) {
 		this.deficiente = deficiente;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
 	}
 
 }
