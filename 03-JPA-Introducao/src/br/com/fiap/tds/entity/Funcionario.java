@@ -29,7 +29,7 @@ public class Funcionario {
 	private String nome;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name="DS_TIPO_CONTRATO", length = 8)
+	@Column(name="DS_TIPO_CONTRATO", nullable = false)
 	private TipoContrato tipo;
 	
 	@Temporal(TemporalType.DATE)
@@ -43,7 +43,7 @@ public class Funcionario {
 	@Column(name="FL_FOTO")
 	private byte[] foto;
 	
-	@Column(name="NM_FUNCIONARIO", length = 50)
+	@Column(name="DS_CARGO", length = 50)
 	private String cargo;
 	
 	@Column(name="ST_DEFICIENTE")
