@@ -10,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -76,6 +77,12 @@ public class Endereco {
 		this.tipoEndereco = tipoEndereco;
 	}
 
+	//Método que é executado automaticamente antes de cadastrar
+	@PrePersist
+	public void executar() {
+		System.out.println("Cadastrando um endereco...");
+	}
+	
 	public int getCodigo() {
 		return codigo;
 	}

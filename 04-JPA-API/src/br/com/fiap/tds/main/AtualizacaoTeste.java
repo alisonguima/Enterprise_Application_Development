@@ -1,8 +1,11 @@
-package br.com.fiap.tds.entity;
+package br.com.fiap.tds.main;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import br.com.fiap.tds.entity.Endereco;
+import br.com.fiap.tds.entity.TipoEndereco;
 
 public class AtualizacaoTeste {
 

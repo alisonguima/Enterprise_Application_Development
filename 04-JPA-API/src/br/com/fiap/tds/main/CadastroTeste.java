@@ -16,7 +16,7 @@ public class CadastroTeste {
 		EntityManager em = fabrica.createEntityManager();
 		
 		//Instanciar um endereco sem o código (Estado : novo - não gerenciado)
-		Endereco end = new Endereco("11230904", "Avenida Lins de Vasconselos", 1222, true, TipoEndereco.COMERCIAL);
+		Endereco end = new Endereco("11230904", "Rua Oscar Freire", 1234, true, TipoEndereco.COMERCIAL);
 		
 		//Coloca o endereco no contexto do entity manager (gerenciado)
 		em.persist(end);
