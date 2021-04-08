@@ -1,5 +1,5 @@
 package br.com.fiap.tds.entity;
 
-public enum TipoEmpresa {
+public enum Tipo {
 	MATRIZ, FILIAL
 }

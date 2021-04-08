@@ -1,23 +1,24 @@
 package br.com.fiap.tds.dao.impl;
 
-import java.lang.reflect.ParameterizedType;
 
 import javax.persistence.EntityManager;
-
 import br.com.fiap.tds.dao.GenericDao;
 import br.com.fiap.tds.exception.CommitException;
 import br.com.fiap.tds.exception.EntityNotFoundException;
 
-public abstract class GenericDaoImpl<E, K> implements GenericDao<E, K> {
+import java.lang.reflect.ParameterizedType;
 
+public abstract class GenericDaoImpl<E,K> implements GenericDao<E, K> {
+	
 	private EntityManager em;
 	
-	private Class<E> clazz; //Atributo que armazena o .class da Entidade
-
+	private Class<E> clazz; // Atributo que armazena o .class da Entidade
+	
 	@SuppressWarnings("all")
 	public GenericDaoImpl(EntityManager em) {
 		this.em = em;
-		this.clazz = (Class<E>) ((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+		this.clazz = (Class<E>) ((ParameterizedType) 
+				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 
 	@Override
@@ -28,10 +29,9 @@ public abstract class GenericDaoImpl<E, K> implements GenericDao<E, K> {
 	@Override
 	public E search(K id) throws EntityNotFoundException {
 		E entidade = em.find(clazz, id);
-		if (entidade == null) {
+		if (entidade == null)
 			throw new EntityNotFoundException();
-		}
-		return null;
+		return entidade;
 	}
 
 	@Override

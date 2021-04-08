@@ -11,37 +11,36 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TB_ESTABELECIMENTO")
-@SequenceGenerator(name = "estabelecimento", sequenceName = "SQ_ESTABELECIMENTO", allocationSize = 1)
+@Table(name="TB_ESTABELECIMENTO")
+@SequenceGenerator(name="est", sequenceName = "SQ_TB_ESTABELECIMENTO", allocationSize = 1)
 public class Estabelecimento {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estabelecimento")
-	@Column(name = "cd_estabelecimento")
+	@Column(name="cd_estabelecimento")
+	@GeneratedValue(generator = "est", strategy = GenerationType.SEQUENCE)
 	private int codigo;
-	@Column(name = "nm_estabelecimento", length = 70, nullable = false)
-	private String estabelecimento;
-	@Column(name = "nr_cnpj", length = 22, nullable = false)
+	
+	@Column(name="nm_estabelecimento", nullable = false, length = 70)
+	private String nome;
+	
+	@Column(name="nr_cnpj", length = 22, nullable = false)
 	private String cnpj;
-	@Column(name = "ds_tipo")
+	
 	@Enumerated(EnumType.STRING)
-	private TipoEmpresa tipo;
-
-	public Estabelecimento() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Estabelecimento(String estabelecimento, String cnpj, TipoEmpresa tipo) {
-		super();
-		this.estabelecimento = estabelecimento;
+	@Column(name="ds_tipo", length = 20)
+	private Tipo tipo;
+	
+	public Estabelecimento() {}
+	
+	public Estabelecimento(String nome, String cnpj, Tipo tipo) {
+		this.nome = nome;
 		this.cnpj = cnpj;
 		this.tipo = tipo;
 	}
-
-	public Estabelecimento(int codigo, String estabelecimento, String cnpj, TipoEmpresa tipo) {
-		super();
+	
+	public Estabelecimento(int codigo, String nome, String cnpj, Tipo tipo) {
 		this.codigo = codigo;
-		this.estabelecimento = estabelecimento;
+		this.nome = nome;
 		this.cnpj = cnpj;
 		this.tipo = tipo;
 	}
@@ -54,12 +53,12 @@ public class Estabelecimento {
 		this.codigo = codigo;
 	}
 
-	public String getEstabelecimento() {
-		return estabelecimento;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setEstabelecimento(String estabelecimento) {
-		this.estabelecimento = estabelecimento;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getCnpj() {
@@ -70,11 +69,12 @@ public class Estabelecimento {
 		this.cnpj = cnpj;
 	}
 
-	public TipoEmpresa getTipo() {
+	public Tipo getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(TipoEmpresa tipo) {
+	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
+	
 }

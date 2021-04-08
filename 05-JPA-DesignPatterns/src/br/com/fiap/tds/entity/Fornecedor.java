@@ -1,6 +1,6 @@
 package br.com.fiap.tds.entity;
 
-import java.sql.Date;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,30 +15,30 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
-@Table(name = "TB_ESTABELECIMENTO")
-@SequenceGenerator(name = "fornecedor", sequenceName = "SQ_FORNECEDOR", allocationSize = 1)
+@Table(name="TB_FORNECEDOR")
+@SequenceGenerator(name="for", sequenceName = "SQ_TB_FORNECEDOR", allocationSize = 1)
 public class Fornecedor {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fornecedor")
-	@Column(name = "cd_fornecedor")
+	@Column(name="cd_fornecedor")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "for")
 	private int codigo;
-	@Column(name = "nm_fornecedor", length = 60, nullable = false)
+	
+	@Column(name="nm_fornecedor", length = 60, nullable = false)
 	private String nome;
-	@Column(name = "dt_cadastro", updatable = false)
-	@Temporal(TemporalType.TIMESTAMP)
+	
 	@CreationTimestamp
-	private Date dataCadastro;
-
-	public Fornecedor() {
-	}
-
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="dt_cadastro", updatable = false)
+	private Calendar dataCadastro;
+	
+	public Fornecedor() {}
+	
 	public Fornecedor(String nome) {
-		super();
 		this.nome = nome;
 	}
 
 	public Fornecedor(int codigo, String nome) {
-		super();
 		this.codigo = codigo;
 		this.nome = nome;
 	}
@@ -59,11 +59,12 @@ public class Fornecedor {
 		this.nome = nome;
 	}
 
-	public Date getDataCadastro() {
+	public Calendar getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(Date dataCadastro) {
+	public void setDataCadastro(Calendar dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
+	
 }
