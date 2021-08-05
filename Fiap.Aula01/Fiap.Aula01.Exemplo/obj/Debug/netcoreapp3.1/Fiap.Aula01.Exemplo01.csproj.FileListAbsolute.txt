@@ -1,0 +1,13 @@
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.exe
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.deps.json
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.runtimeconfig.json
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.runtimeconfig.dev.json
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.dll
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\bin\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.pdb
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.csproj.AssemblyReference.cache
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.AssemblyInfoInputs.cache
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.AssemblyInfo.cs
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.csproj.CoreCompileInputs.cache
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.dll
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.pdb
+C:\Develop\2TDSS\Enterprise_Application_Development\Fiap.Aula01\Fiap.Aula01.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula01.Exemplo01.genruntimeconfig.cache
